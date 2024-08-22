@@ -346,9 +346,10 @@ export default function Modal({ children, hero }: ModalProps) {
               </p>
             )}
             {allCounters.length > 0 &&
-              allCounters.map((counter, i) => (
+              allCounters.map((counter) => (
                 <div
                   className={`flex flex-col items-center border ${c.titleBg} ${c.border} rounded-md overflow-hidden`}
+                  key={counter.id}
                 >
                   <img
                     src={counter.image}
